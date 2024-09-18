@@ -16,12 +16,26 @@
             <h1>Hospital Care</h1>
         </div>
         <section class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Hospital List</a>
-            <a href="#">Department</a>
-            <a href="#">Contact Us</a>
-            <button class="register-btn" id="register-btn">Registration</button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Hospital List</a></li>
+                <li>
+                    <label class="label" for="department">Department</label>
+                    <input type="checkbox" name="" id="department">
+                    <div class="departments-area">
+                        <div class="dept-list">Cardiology</div>
+                        <div class="dept-list">Emergency Medicine</div>
+                        <div class="dept-list">Surgery</div>
+                        <div class="dept-list">Gastroenterology</div>
+                        <div class="dept-list">Diagnostic imaging</div>
+                        <div class="dept-list">Orthodontics</div>
+                    </div>
+                </li>
+                <li><a href="#footer">Contact Us</a></li>
+                <li> <button class="register-btn" id="register-btn">Registration</button></li>
+            </ul>
+
         </section>
     </nav>
 
@@ -30,10 +44,10 @@
             <img src="hero_img.jpg" alt="Hero Image" id="hero_image">
             <div class="Hero_about">
                 <div class="statement">
-                    <h1>Healthcare for Good Today. Tomorrow.Always</h1>
+                    <h1>Healthcare for Good Today, Tomorrow, Always !</h1>
                 </div>
-                <div class="input">
-                    <input type="text" placeholder="Search for Doctors,Specialites and Hospitals">
+                <div class="search-input">
+                    <input type="text" placeholder="Search for Doctors,Specialites and Hospitals...">
                     <button id="btn" class="button">Search</button>
                 </div>
             </div>
@@ -139,7 +153,7 @@
         </div>
 
     </div>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <h2>OPD Hospital Management System</h2>
         <p>123 Health Street, Wellness City, HC 12345</p>
         <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>

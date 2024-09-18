@@ -13,7 +13,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the navbar stays on top */
+    z-index: 1; /* Ensure the navbar stays on top */
     background-color: #1b4897;
     padding: 20px;
 }
@@ -23,6 +23,7 @@ nav.navbar {
     justify-content: space-between;
     align-items: center;
 }
+
 
 .logo {
     display: flex;
@@ -40,6 +41,7 @@ nav.navbar {
     color: white;
     font-size: 3rem;
     font-weight: bolder;
+    
 }
 
 .nav-links {
@@ -47,18 +49,86 @@ nav.navbar {
     align-items: center;
 }
 
-.nav-links a {
+.nav-links>ul{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.nav-links li{ 
     color: #fff;
-    text-decoration: none;
+    
+    list-style: none;
     margin: 0 15px;
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s color ease-in;
 }
 
 .nav-links a:hover {
     color: #000000;
-    font-size: 21px;
+    /* font-size: 21px; */
+}
+
+#department{
+    display: none;
+}
+.departments-area{
+    display: none;
+    background-color: #f4f4f4;
+    padding: 5px 5px;
+    position: absolute;
+    top:30px;
+    right: -17px;
+    animation: fadeIn 0.5s ease-in ;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes scaleUp {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(opx);
+    }
+}
+.dept-list{
+    color: #000;
+    font-size: 1rem;
+    margin: 5px 7px;
+    padding-bottom: 2px;
+    border-bottom: 0.7px solid rgb(181, 181, 181);
+    box-sizing: border-box;
+    transition: 0.7s color ease-in;
+    cursor: pointer;
+}
+.dept-list:hover{
+    border-bottom: 0.7px solid rgb(220, 10, 10);
+}
+
+#department:checked~.departments-area{
+display: block;
+}
+.label{
+    cursor: pointer;
+    transition: 0.7s color ease-in;
+}
+.label:hover{
+    color: #000;
 }
 
 .register-btn {
@@ -69,13 +139,13 @@ nav.navbar {
     cursor: pointer;
     border-radius: 8px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: 0.5s color ;
 }
 
 .register-btn:hover {
     transition: padding 0.5s;
-    background-color: #196858;
-    padding: 14px 27px;
+    background-color: #cff1ea;
+    color:#000;
 }
 
 /* Responsive design for mobile */
@@ -87,15 +157,13 @@ nav.navbar {
 
     .nav-links {
         flex-direction: column;
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
-
-    .nav-links a {
-        margin: 5px 0;
+    .nav-links li{
+        font-size: 15px;
     }
-
-    .register-btn {
-        margin-top: 10px;
+    .statement h1{
+        font-size: 2rem;
     }
 }
 
@@ -116,7 +184,7 @@ nav.navbar {
 .Hero_about {
    width: 80%;
    height: 400px;
-   margin-left:250px;
+   margin: auto ;
    position: absolute;
    top: 0;
    left: 0;
@@ -131,29 +199,39 @@ nav.navbar {
     margin: 5px;
     margin-bottom: 10px;
     font-weight: bold;
-   
+    text-align: center;
+   animation: scaleUp 1s ease-in-out;
    
 }
 
 .statement  h1{
    font-size: 4rem;
 }
+.search-input{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
-.input input {
-    width: 650px;
-    height: 70px;
+.search-input input {
+    width: 50%;
+    height: 50px;
     border: none;
-    margin-left: 8px;
+    /* margin-left: 8px; */
     padding-left: 10px;
     font-size: 1.4rem;
     border-radius: 5px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+}
+input[type="text"]:focus{
+    border: 1px solid #007BFF;
+    outline: none;
 }
 #btn {
-    background-color: #145bad;
+    background-color: #007BFF;
     color: rgb(0, 0, 0);
     border: none;
-    padding: 15px 28px;
+    padding: 12px 28px;
     cursor: pointer;
     border-radius: 8px;
     font-size: 1.3rem;
@@ -163,7 +241,6 @@ nav.navbar {
 }
 #btn:hover {
    background-color: #1b4897; 
-   padding: 17px 29px;
    color: white;
 
 }
@@ -178,23 +255,29 @@ nav.navbar {
     font-weight: bold;
 }
 .line {
-    width: 100%;
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
     height: 3px;
     background-color: #145bad;
 }
 .data {
+    width: 90%;
+    max-width: 1280px;
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    justify-content: space-around;
+    margin: auto;
     margin-top: 120px;
-    margin-left: 90px;
-    margin-right: 90px;
+    /* margin-left: 90px;
+    margin-right: 90px; */
 }
 #card-1 {
+    width: 300px;
     border: 1.7px solid rgba(0, 0, 0, 0.438); /* Light black border */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 20px;
+    text-align: center;
     
 }
 #card-1 h2 {
@@ -204,6 +287,7 @@ nav.navbar {
 .footer {
     border-top: 3px solid black;
     background-color: #549ceabd;
+    background-image:linear-gradient(to bottom right, #1b4897, rgb(218, 109, 248)) ;
     padding: 20px;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -228,9 +312,21 @@ nav.navbar {
     font-size: 1.2em;
 }
 /* profile Doctor */
-
+.about-doctors {
+    width: 90%;
+    max-width: 1280px;
+    /* margin-top: 80px; */
+   margin: 50px auto;
+   padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+    gap: 150px;
+    /* background-color: green; */
+}
 .profile-card {
-    width: fit-content;
+    width: 300px;
     height: fit-content;
     padding: 20px;
     border: 1px solid #ddd;
@@ -239,6 +335,11 @@ nav.navbar {
     overflow: hidden;
     text-align: center;
     font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out ;
+}
+.profile-card:hover{
+    transform: scale(1.1);
 }
 .profile-card img {
     width: 100%;
@@ -258,15 +359,7 @@ nav.navbar {
     color: #555;
     margin: 5px 0 0;
 }
-.about-doctors {
-    margin-top: 79px;
-   margin: 50px;
-   padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 180px;
-}
+
 .doc-image img{
     width: 120px;
     height: 120px;
