@@ -14,20 +14,20 @@
         <form action="/submit_registration" method="POST">
             <!-- Name Field -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="name...">
 
             <!-- Email Field -->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="xyz@gmail.com">
 
             <!-- Phone Number Field -->
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-            <small>Format: 1234567890</small>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="9999999999">
+            <!-- <small>Format: 1234567890</small> -->
 
             <!-- Disease Name Field -->
             <label for="disease">Disease Name:</label>
-            <input type="text" id="disease" name="disease" required>
+            <input type="text" id="disease" name="disease" required placeholder="disease name...">
 
             <!-- Gender Field -->
             <div class="gender-group">
@@ -42,7 +42,7 @@
 
             <!-- Age Field -->
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="0" required>
+            <input type="number" id="age" name="age" min="0" required placeholder="age..">
 
             <!-- Submit Button -->
             <input type="submit" value="Register">
