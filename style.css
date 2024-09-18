@@ -1,0 +1,274 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    background-color: #1b4897;
+    padding: 20px;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    margin-right: 30px;
+    border-radius: 100%;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000000;
+    font-size: 21px;
+}
+
+.register-btn {
+    background-color: #18BC9C;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    transition: padding 0.5s;
+    background-color: #196858;
+    padding: 14px 27px;
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+    nav.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+
+    .register-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 110px; /* Adjusted to give space below the fixed navbar */
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+#hero_image {
+    width: 100%;
+    height: 500px;
+    opacity: 50%;
+
+}
+.Hero_about {
+   width: 80%;
+   height: 400px;
+   margin-left:250px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(211, 205, 205, 0.4);
+   padding-top: 60px;
+   padding-left: 70px;
+   border-radius: 10px;
+}
+.statement{
+    margin: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+   
+   
+}
+
+.statement  h1{
+   font-size: 4rem;
+}
+
+.input input {
+    width: 650px;
+    height: 70px;
+    border: none;
+    margin-left: 8px;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+#btn {
+    background-color: #145bad;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 28px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    width: 150px;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+#btn:hover {
+   background-color: #1b4897; 
+   padding: 17px 29px;
+   color: white;
+
+}
+.heading {
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.heading h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: #145bad;
+}
+.data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 120px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+#card-1 {
+    border: 1.7px solid rgba(0, 0, 0, 0.438); /* Light black border */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+#card-1 h2 {
+    margin-top: 10px;
+}
+
+.footer {
+    border-top: 3px solid black;
+    background-color: #549ceabd;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+.footer h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+.footer p {
+    margin: 5px 0;
+    color: #555555;
+}
+.footer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-links a {
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+/* profile Doctor */
+
+.profile-card {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.profile-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.profile-card .content {
+    padding: 20px;
+}
+.profile-card .name {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+.profile-card .specialty {
+    font-size: 1.2em;
+    color: #555;
+    margin: 5px 0 0;
+}
+.about-doctors {
+    margin-top: 79px;
+   margin: 50px;
+   padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 180px;
+}
+.doc-image img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
